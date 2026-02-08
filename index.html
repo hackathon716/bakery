@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lumière Bakery | Artisan Breads & Pastries</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ['"Playfair Display"', 'serif'],
+              sans: ['"Poppins"', 'sans-serif'],
+            },
+            colors: {
+              bakery: {
+                50: '#FDFCF9',  // Text - Almost White
+                100: '#EADDC6', // Text - Cream / Muted
+                200: '#D4AF37', // Accent - Gold
+                300: '#B49052', // Accent - Dark Gold
+                400: '#8D6E63', // Muted Brown
+                500: '#5D4037', // Medium Brown
+                600: '#4E342E', // Dark Brown
+                700: '#3E2723', // Deep Brown
+                800: '#231712', // Card Background / Secondary
+                900: '#120C08', // Main Background - Almost Black
+                950: '#0A0604', // Footer / Deepest
+              }
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.5s ease-out',
+              'slide-up': 'slideUp 0.8s ease-out',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              slideUp: {
+                '0%': { transform: 'translateY(20px)', opacity: '0' },
+                '100%': { transform: 'translateY(0)', opacity: '1' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #120C08; /* bakery-900 */
+        color: #EADDC6; /* bakery-100 */
+        font-family: 'Poppins', sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Playfair Display', serif;
+      }
+      
+      /* Premium Selection */
+      ::selection {
+        background: #D4AF37;
+        color: #120C08;
+      }
+
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #120C08;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #3E2723;
+        border-radius: 4px;
+        border: 2px solid #120C08;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #D4AF37;
+      }
+
+      /* Smooth Scrolling */
+      html {
+        scroll-behavior: smooth;
+      }
+      
+      .glass-panel {
+        background: rgba(35, 23, 18, 0.7);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "framer-motion": "https://esm.sh/framer-motion@^12.33.0",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.13.0",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
